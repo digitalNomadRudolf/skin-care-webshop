@@ -1,0 +1,252 @@
+// shopping cart functionality
+// list product with a small image of product, product name, price, quantity with plus and minus buttons and a number that 
+// shows the current quantity. remove/trash icon to remove item, total item order amount.
+// clear cart button, and a subtotal, tax and total amount with respective values. below that a paypal button
+// if item amount equals less than 1, item will be automatically removed.
+// when clicked on the add to cart button, an added item to cart popup will show, with title of: added item to cart. And it
+// will show the product image, item title, price and a button to continue shopping and a button to go to the cart.
+
+
+/* create a dark overlay bg when the cart is clicked that covers the full viewport so that all focus goes to cart */
+.overlay {
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    z-index: 100;
+    display:none;
+}
+
+span.item-count {
+    font-size: 1.5em;
+}
+
+.marge-lr {
+    margin: 0 1em;
+}
+
+span.ovo-big {
+    font-family: 'Ovo', serif;
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+span.ovo-light {
+    font-family: 'Ovo', serif;
+    font-size: 1.7rem;
+}
+
+.place-end {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.minimum-w {
+    min-width: 170.17px;
+    margin: .5em 0;
+}
+
+.pink-btn {
+    padding: 1em;
+    background: #F9BE92;
+    margin-right: 3em;
+    border: 1px solid;
+    transition: all .2s;
+
+        &:hover {
+            background: #fff;
+
+            span {
+                color: #000;
+            }
+        }
+}
+
+.brown-btn {
+    padding: 1em;
+    background: #AC020E;
+    margin-right: 3em;
+    border: 1px solid;
+    transition: all .2s;
+    color: white;
+
+        &:hover {
+            background: #000;
+
+            span {
+                color: #fff;
+            }
+        }
+}
+
+span.white {
+    color: #fff;
+    font-family: 'Ovo', serif;
+    font-size: 1.3rem;
+}
+
+span.black {
+    color: #000;
+    font-family: 'Ovo', serif;
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.no-scroll {
+    overflow: hidden;
+}
+
+.cart-modal {
+    width: 90%;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    /* display:none; */
+    height: 90%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    z-index: 300;
+
+    &-title {
+        background: #151110;
+        padding: 1em 3em;
+
+        h1 {
+            color: #fff;
+        }
+    }
+
+    .container {
+        width: 95%;
+        max-width: unset;
+        padding: 0;
+        margin: 1em 2em;        
+
+        .row {
+
+            .col {
+                display: flex;
+                flex-wrap: wrap;
+                margin: 1em 0;
+
+                .n-pwrap {
+                    flex: 1;
+                }
+
+                .prod-thumb {
+                    width: 100px;
+                    height: 100px;
+                    -webkit-box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 0.25);
+                    -moz-box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 0.25);
+                    box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 0.25);
+
+                    img.prod-thumb-img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
+
+                .prod-name {
+                    flex: .5;
+
+                    span.nametag {
+                        display: flex;
+                        flex-wrap: wrap;
+                    }
+                }
+
+                .prod-quantity {
+
+
+                    button.minus-item {
+                        border: 0;
+                        background: transparent;
+                        
+                        i.fas.fa-minus {
+                            padding: 0 .5em;
+                        }
+                    }
+
+                    input.item-count {
+                        max-width: 5em;
+                    }
+
+                    button.plus-item {
+                        border: 0;
+                        background: transparent;
+
+                        i.fas.fa-plus {
+                            padding: 0 .5em;
+                        }
+                    }
+                }
+
+                
+
+                
+            }
+        }
+
+
+    .flex-wrapper {
+        display: flex;
+        margin-top: 1.6em;
+        margin-right: 3em;
+
+        .cta-buttons {
+            margin-right: auto;
+        }
+    
+        .calculations {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+            flex-direction: column;
+
+            span {
+                font-family: 'Ovo', serif;
+                font-size: 1.5rem;
+
+                &.amount {
+                    font-weight: bold;
+                    font-size: 1.4rem;
+                    padding-left: .4em;
+                }
+            }
+
+        .paypal-checkout-btn {
+
+            &:hover {
+
+                i.fab.fa-cc-paypal {
+                    color: cornflowerblue;
+                }
+                
+            }
+
+            
+
+            i.fab.fa-cc-paypal {
+                font-size: 5em;
+                padding: 0em .4em;
+                padding-right: 0;
+                transition: all .2s;
+            }
+        }
+
+        .prod-subtotal, .prod-tax, .total-amount, .paypal-checkout-btn {
+            display:flex;
+        }
+
+        .subt, .ptax, .totam, .payp-check {
+            margin-right: auto;
+        }
+
+            } 
+
+        }
+    }
+}
