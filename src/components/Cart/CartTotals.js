@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 import {Link} from 'react-router-dom';
+import PayPalButton from './PayPalButton';
 
 export default class CartTotals extends Component {
 
     render() {
 
-    const { cart, clearCart, calcAmounts, closeCart, cartSubTotal, cartTax, cartTotal } = this.props;
+    const { cart, clearCart, calcAmounts, closeCart, cartSubTotal, cartTax, cartTotal, history } = this.props;
     console.log(this.props)
     return (
         
@@ -37,7 +38,8 @@ export default class CartTotals extends Component {
                           <span className="totam">Total:</span> <span className="amount">$ {cartTotal}</span>
                         </div>
                         <div className="paypal-checkout-btn">
-                          <span className="payp-check">Checkout:</span> <i className="fab fa-cc-paypal"></i>
+                          <span className="payp-check">Checkout with </span> 
+                            <PayPalButton total={cartTotal} clearCart={clearCart} history={history} />
                         </div>
                     </div>
 

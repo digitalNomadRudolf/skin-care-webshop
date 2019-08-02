@@ -28,7 +28,8 @@ export default class Cart extends Component {
                                 calcAmounts={this.props.calcAmounts}
                                 cartSubTotal={this.props.cartSubTotal}
                                 cartTax={this.props.cartTax}
-                                cartTotal={this.props.cartTotal} />
+                                cartTotal={this.props.cartTotal}
+                                history={this.props.history} />
                                 
                 </div>
             </div> 
