@@ -39,7 +39,7 @@ export default class CartTotals extends Component {
                         </div>
                         <div className="paypal-checkout-btn">
                           <span className="payp-check">Checkout with </span> 
-                            <PayPalButton total={cartTotal} clearCart={clearCart} history={history} />
+                            /* <PayPalButton total={cartTotal} clearCart={clearCart} history={history} /> */
                         </div>
                     </div>
 
