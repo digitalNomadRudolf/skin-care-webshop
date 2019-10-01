@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import styles from '../../Navbar.scss';
 
 export default class SideNav extends Component {
@@ -25,10 +26,10 @@ export default class SideNav extends Component {
         return (
             <div id="sideNav" className={"sidenav " + (this.state.visible ? "visible" : "")}>
                     <a href="javascript:void(0)" className="closebtn">&times;</a>
-                    <a href="#">Cellulite</a>
-                    <a href="#">Anti Aging</a>
-                    <a href="#">Smooth Skin</a>
-                    <a href="#">Stretch Cream</a>
+                    <Link to="/details">Cellulite</Link>
+                    <Link to="/details">Anti Aging</Link>
+                    <Link to="/details">Smooth Skin</Link>
+                    <Link to="/details">Stretch Cream</Link>
                 </div>
         )
     }

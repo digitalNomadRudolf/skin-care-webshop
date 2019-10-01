@@ -9,6 +9,14 @@ span.greyCart {
   padding: .3em 1em;
   display: block;
   float: left;
+
+  @media all and (max-width: 670px) {
+    font-size: .4em;
+  }
+
+  @media all and (max-width: 480px) {
+    font-size: 0;
+  }
 }
 
 
@@ -25,13 +33,19 @@ button:focus {outline:none !important;}
     .logo {
       padding:.1em;
       font-weight:700;
+      letter-spacing: .4em;
       color:white;
       position:absolute;
       top: 5px;
       left:50%;
       transform:translateX(-50%);
-      font-family: 'Ovo', serif;
+      font-family: 'Raleway', sans-serif;
       font-size: 2em;
+
+        @media all and (max-width: 670px) {
+          font-size: 1.4em;
+          top: 15px;
+        }
     }
 
     .hamburger {

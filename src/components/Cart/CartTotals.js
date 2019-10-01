@@ -14,9 +14,9 @@ export default class CartTotals extends Component {
 
                     <div className="cta-buttons">
                       <div className="keep-shopping" >
-                      <Link to="/">
+                      {/* <Link to="/"> */}
                         <button className="minimum-w pink-btn" onClick={() => closeCart()}><span className="black">keep shopping</span></button>
-                      </Link>
+                      {/* </Link> */}
                       </div>
   
                       <div className="clear-cart-btn">

@@ -7,7 +7,9 @@ export const productItems = [
     "id": 1,
     "category": "honest skin creme",
     "title": "Smooth Cellulite Cream",
-    "img": "https://images.unsplash.com/photo-1562887245-9d941e87344e?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
+    /* "img": "https://images.unsplash.com/photo-1562887245-9d941e87344e?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80", */
+    "img": "https://images.unsplash.com/photo-1562158467-f89e51f06266?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80",
+    "img2": "https://images.unsplash.com/photo-1562885388-e9b4e3720b33?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1400&q=80",
     "price": 199,
     "company": "Honest Skin creme",
     "info":
@@ -22,6 +24,7 @@ export const productItems = [
     "category": "honest skin creme",
     "title": "Best Beauty Skin Creme",
     "img": "https://images.pexels.com/photos/279480/pexels-photo-279480.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "img2": "https://images.unsplash.com/photo-1532413992378-f169ac26fff0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1400&q=80",
     "price": 249,
     "company": "Honest Skin creme",
     "info":
@@ -36,6 +39,7 @@ export const productItems = [
     "category": "honest skin creme",
     "title": "Honest Hand Creme",
     "img": "https://images.pexels.com/photos/1029896/pexels-photo-1029896.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "img2": "https://images.unsplash.com/photo-1563208539-abbe61500152?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1400&q=80",
     "price": 649,
     "company": "Honest Skin creme",
     "info":
@@ -50,6 +54,7 @@ export const productItems = [
     "category": "best of organic products",
     "title": "Organic Leaves",
     "img": "https://images.pexels.com/photos/2473990/pexels-photo-2473990.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+    "img2": "https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1482&q=80",
     "price": 49.00,
     "company": "Organic Leaves Ltd.",
     "info":
@@ -64,6 +69,7 @@ export const productItems = [
     "category": "best of organic products",
     "title": "Aloe Vera Skin Protector",
     "img": "https://images.pexels.com/photos/1634502/pexels-photo-1634502.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "img2": "https://images.unsplash.com/photo-1557434773-7fabb2f01f7d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1414&q=80",
     "price": 49.00,
     "company": "Organic Leaves Ltd.",
     "info":
@@ -78,6 +84,7 @@ export const productItems = [
     "category": "best of organic products",
     "title": "Hemp Oil",
     "img": "https://images.pexels.com/photos/2565761/pexels-photo-2565761.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "img2": "https://images.unsplash.com/photo-1562782558-4435e200fd84?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1534&q=80",
     "price": 147.20,
     "company": "Organic Leaves Ltd.",
     "info":
@@ -93,6 +100,7 @@ export const productItems = [
     "category": "sprays and cremes",
     "title": "Everything for the skin",
     "img": "https://images.pexels.com/photos/264870/pexels-photo-264870.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "img2": "https://images.unsplash.com/photo-1562887284-eb863165ebc8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1400&q=80",
     "price": 99.40,
     "company": "Skin Products Ltd.",
     "info":
@@ -107,6 +115,7 @@ export const productItems = [
     "category": "sprays and cremes",
     "title": "Exotic Blue",
     "img": "https://images.pexels.com/photos/1103970/pexels-photo-1103970.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "img2": "https://images.unsplash.com/photo-1527017895487-3ac53c0f03fa?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1534&q=80",
     "price": 19.99,
     "company": "Skin Products Ltd.",
     "info":
@@ -121,6 +130,7 @@ export const productItems = [
     "category": "sprays and cremes",
     "title": "Purple Skin Powder",
     "img": "https://images.pexels.com/photos/1927612/pexels-photo-1927612.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260",
+    "img2": "https://images.unsplash.com/photo-1558456364-dc19ca3a2052?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1575&q=80",
     "price": 79.99,
     "company": "Skin Products Ltd.",
     "info":
@@ -136,6 +146,7 @@ export const productItems = [
     "category": "best uv protection",
     "title": "Facial UV cream",
     "img": "https://images.pexels.com/photos/2442898/pexels-photo-2442898.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "img2": "https://images.unsplash.com/photo-1556902231-76d22d02e795?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1575&q=80",
     "price": 59.99,
     "company": "Best UV",
     "info":
@@ -150,6 +161,7 @@ export const productItems = [
     "category": "best uv protection",
     "title": "Smooth Skin Spray",
     "img": "https://images.pexels.com/photos/965992/pexels-photo-965992.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "img2": "https://images.unsplash.com/photo-1558126626-6861a345d6e1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1534&q=80",
     "price": 39.99,
     "company": "Best UV",
     "info":
@@ -164,6 +176,7 @@ export const productItems = [
     "category": "best uv protection",
     "title": "Honest Beauty Package",
     "img": "https://images.unsplash.com/photo-1562887189-4b6edf71d847?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80",
+    "img2": "https://images.unsplash.com/photo-1562887085-22edc4817a9e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1400&q=80",
     "price": 499.99,
     "company": "Best UV",
     "info":
@@ -190,7 +203,7 @@ const catGroup = function(data, key) {
     return data.reduce(function(acc, item) {
       (acc[item[key]] = acc[item[key]] || []).push(item);
       return acc;
-    }, {});
+    }, []);
   };
 const productCats = catGroup(productItems, 'category');
  

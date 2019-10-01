@@ -1,5 +1,5 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import Cart from './Cart/Cart';
 
 
@@ -23,11 +23,16 @@ export default function Product(props) {
 
                 <div className="home-prod-buttons">
                     <div className="read-more">
-                        <Link to="/details">
+                        {/* <Link to="/details"> */}
+                        <Link to={{
+                                pathname: '/productpage/',
+                                state: { product }
+                                  }}>
                         <button className="read-more--link">
                           discover
                           </button>
                         </Link>
+                        {/* </Link> */}
                     </div>
                     <div className={product.inCart ? "in-cart-class" : "add-to-cart"}>
                         <button className="add-to-cart--link" 

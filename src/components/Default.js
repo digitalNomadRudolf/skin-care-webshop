@@ -1,11 +1,11 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import {Redirect} from 'react-router-dom';
+import Footer from './Footer/Footer';
 
 export default class Default extends Component {
     render() {
         return (
-            <div>
-                <h3>page not found...</h3>
-            </div>
+            <Redirect to="/" />
         )
     }
 }

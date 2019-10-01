@@ -2,16 +2,18 @@ import React, { Component } from "react";
 import './App.scss';
 import './Navbar.scss';
 import './Home.scss';
+import './horiz-cont.scss';
+import './product-page.scss';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Navbar from './components/Navbar/Navbar';
-import ProductList from './components/ProductList';
-import CartTitle from './components/Cart/CartTitle';
-import CartList from './components/Cart/CartList';
-import CartTotals from './components/Cart/CartTotals';
-import Footer from './components/Footer/Footer';
+import { BrowserRouter as Router, Route, Switch} from 'react-router-dom';
+import Home from './pages/Home';
+import Details from './pages/Details';
+import ProductPage from './pages/ProductPage.js';
+import Default from './components/Default';
 import { productItems } from './data';
 
 class App extends Component {
+
     constructor(props) {
       super(props);
     }
@@ -30,6 +32,7 @@ class App extends Component {
     componentDidMount() {
       this.fetchProducts(); 
   }
+  
 
     // create a method for fetching the products 
     fetchProducts = () => {
@@ -205,75 +208,56 @@ calcAmounts = () => {
     });
 };
 
-
-    render() {
-
+render() {
   return (
-    /* the react fragment is used to prevent having to overpopulate with HTML code */
-    <React.Fragment>
-      <Navbar cart={this.state.cart}
-              activeCart={this.state.activeCart}
-              toggleCart={this.toggleCart}
-              openCart={this.openCart}
-              closeCart={this.closeCart}
-              increment={this.increment}
-              decrement={this.decrement}
-              removeItem={this.removeItem}
-              clearCart={this.clearCart}
-              calcAmounts={this.calcAmounts}
-              cartSubTotal={this.state.cartSubTotal}
-              cartTax={this.state.cartTax}
-              cartTotal={this.state.cartTotal}
-      />
+    <Switch>
+      <Route exact path="/" /* component={Home} */ render={(routeProps) => (<Home {...routeProps}     theState={this.state}
+                                                                                                      fetchProducts={this.fetchProducts}
+                                                                                                      toggleCart={this.toggleCart}
+                                                                                                      openCart={this.openCart}
+                                                                                                      closeCart={this.closeCart}
+                                                                                                      increment={this.increment}
+                                                                                                      decrement={this.decrement}
+                                                                                                      removeItem={this.removeItem}
+                                                                                                      clearCart={this.clearCart}
+                                                                                                      calcAmounts={this.calcAmounts}
+                                                                                                      addToCart={this.addToCart}
+                                                                                                      getProduct={this.getProduct} />)} />
 
-      <ProductList products={this.state.products}
-                   cart={this.state.cart}
-                   openCart={this.openCart}
-                   closeCart={this.closeCart}
-                   addToCart={this.addToCart}
-                   getProduct={this.getProduct}
-                   activeCart={this.state.activeCart}
-                   increment={this.increment}
-                   decrement={this.decrement}
-                   removeItem={this.removeItem}
-                   clearCart={this.clearCart}
-                   calcAmounts={this.calcAmounts}
-                   cartSubTotal={this.state.cartSubTotal}
-                   cartTax={this.state.cartTax}
-                   cartTotal={this.state.cartTotal}
-                                                                 />
+      <Route path="/details" /* component={Details} */ render={(routeProps) => (<Details {...routeProps} theState={this.state}
+                                                                                                         fetchProducts={this.fetchProducts}
+                                                                                                         toggleCart={this.toggleCart}
+                                                                                                         openCart={this.openCart}
+                                                                                                         closeCart={this.closeCart}
+                                                                                                         increment={this.increment}
+                                                                                                         decrement={this.decrement}
+                                                                                                         removeItem={this.removeItem}
+                                                                                                         clearCart={this.clearCart}
+                                                                                                         calcAmounts={this.calcAmounts}
+                                                                                                         addToCart={this.addToCart}
+                                                                                                         getProduct={this.getProduct} />)} />
 
+      <Route path="/productpage" /* component={Product} */ render={(routeProps) => (<ProductPage {...routeProps} theState={this.state}
+                                                                                                         fetchProducts={this.fetchProducts}
+                                                                                                         toggleCart={this.toggleCart}
+                                                                                                         openCart={this.openCart}
+                                                                                                         closeCart={this.closeCart}
+                                                                                                         increment={this.increment}
+                                                                                                         decrement={this.decrement}
+                                                                                                         removeItem={this.removeItem}
+                                                                                                         clearCart={this.clearCart}
+                                                                                                         calcAmounts={this.calcAmounts}
+                                                                                                         addToCart={this.addToCart}
+                                                                                                         getProduct={this.getProduct} />)} />
+      <Route exact component={Default}/>
+    </Switch>
+  )
+}
 
-              {/* show cart logic */}
-              {this.state.activeCart &&
-            
-            <div className="cart-modal">
-                    <CartTitle title="Cart" />
-                <div className="container">
-                    <CartList cart={this.state.cart} 
-                              increment={this.increment} 
-                              decrement={this.decrement}
-                              removeItem={this.removeItem} />
-                    <CartTotals cart={this.state.cart}
-                                closeCart={this.closeCart}
-                                clearCart={this.clearCart}
-                                calcAmounts={this.calcAmounts}
-                                cartSubTotal={this.state.cartSubTotal}
-                                cartTax={this.state.cartTax}
-                                cartTotal={this.state.cartTotal} />
-                                
-                </div>
-            </div> 
-            
-          }
-      
-      <Footer />
-    </React.Fragment>
-  );
- }
 }
 
 export default App;
+
 
 
 
@@ -294,7 +278,7 @@ export default App;
             cartTax={this.state.cartTax}
             cartTotal={this.state.cartTotal} />
 
-<Switch>
+      <Switch>
         <Route exact path="/" />
         <Route path="/details" component={Details} />
         <Route path="/navbar/cart" component={Cart} />

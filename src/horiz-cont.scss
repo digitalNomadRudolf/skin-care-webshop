@@ -1,0 +1,191 @@
+.sub-bg, #wrapper.product-page-bg {
+    background: linear-gradient(
+        rgba(250,250,250,.7),
+        rgba(250,250,250,.7)
+    ),
+    url(https://images.unsplash.com/photo-1504548840739-580b10ae7715?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80) no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+
+    #wrapper {
+        background-color: unset;   
+        overflow-x: hidden;     
+    }
+}
+
+#pinContainer {
+    width: 100%;
+    height: 100% !important;
+    overflow: hidden;
+    -webkit-perspective: 1000;
+            perspective: 1000;
+
+            @media all and (max-width: 620px) {
+                padding-bottom: 5em;
+            }
+}
+#slideContainer {
+    width: 400%; /* to contain 4 panels, each with 100% of window width */
+    height: 100%;
+
+    @media all and (max-width: 620px) {
+        width: unset;
+        height: unset;
+    }
+
+
+}
+.panel {
+    height: 100%;
+    max-height: 575px;
+    width: 25%; /* relative to parent -> 25% of 400% = 100% of window width */
+    float: left;
+    padding-top: 3em;
+
+        @media all and (max-width:620px) {
+            height: 50%;
+            width: 90%;
+            margin-top: 5em;
+        }
+}
+
+#section-slides {
+    height: 100%;
+    width: 100%;
+    background-image: none;
+    padding: 3em;
+}
+
+.logo {
+    font-family: 'Aguafina Script', cursive;
+    font-size:1.3em;
+}
+
+.panel.blue {
+    background:    
+    url(https://images.unsplash.com/photo-1556228852-80b6e5eeff06?ixlib=rb-1.2.1&auto=format&fit=crop&w=751&q=80) no-repeat;
+    background-size: contain;
+}
+
+.panel.turqoise {
+    background:    
+    url(https://images.unsplash.com/photo-1556229181-695df2bf2d6f?ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80) no-repeat;
+    background-size: contain;
+}
+
+.panel.green {
+    background:     
+    url(https://images.unsplash.com/photo-1526947425960-945c6e72858f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80) no-repeat;
+    background-size: contain;
+}
+
+.panel.bordeaux {
+    background:     
+    url(https://images.pexels.com/photos/1029896/pexels-photo-1029896.jpeg?auto=format%2Ccompress&cs=tinysrgb&dpr=2&h=650&w=940) no-repeat;
+    background-size: contain;
+}
+
+.right-box {
+    width:40%;
+    min-width: 420px;
+    min-height: 270px;
+    float:right;
+    padding-right:2em;
+    text-align: center;
+    letter-spacing: .03em;
+    margin-right: 9em;
+    position: relative;
+    background: rgba(250,250,250,.8);
+    padding: 3em;
+    padding-bottom: 5em;
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.15);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.15);
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.15);
+
+        @media all and (max-width: 950px) {
+            padding: 1.9em;
+            padding-bottom: 5em;
+        }
+
+        @media all and (max-width: 620px) {
+            margin-right: unset;
+            padding:1.9em;
+            padding-bottom: 5em;
+            float: unset;
+        }
+
+        @media only screen and (max-device-width: 620px) {
+            min-width: 320px;
+            min-height: 370px;
+        }
+
+        h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size:2.1rem;
+        }
+
+        p {
+            font-family: 'Montserrat', sans-serif;
+            font-size: .87em;
+            font-weight: 200;
+            font-family: roboto;
+            line-height: 1.8;
+        }
+
+        .secondary-button {
+            bottom: unset;
+            border-radius: 0;
+            background: #191918;
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%);
+            margin-bottom: 3em;
+
+                &:hover {
+                    background: #fff;
+                    color: #191918;
+                }
+        }
+
+        button.toCart-btn, button.toCart-btn-none {
+            position: absolute;
+            left: 0;
+            border: 0;
+            color: #fff;
+            bottom: -35px;
+            width: 100%;
+            background:#181717;
+            padding: 1em;
+            cursor: pointer;
+            transition: all .2s;
+
+            &:hover {
+                background: #F0DABB;
+                color: #181717;
+
+                span.addCart {
+                    color: #181717;
+                }
+
+                i.fas.fa-shopping-cart {
+                    color: #181717;
+                }
+            }
+
+            span.addCart {
+                color: #fff;
+
+                &:hover {
+                   color: #181717;
+                }
+            }
+
+            i.fas.fa-shopping-cart {
+                color: #fff;
+            }
+        }
+        button.toCart-btn-none {
+            cursor: unset;
+        }
+}
